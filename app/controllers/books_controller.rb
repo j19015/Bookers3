@@ -41,6 +41,7 @@ class BooksController < ApplicationController
         @book=Book.new
         @book_id=Book.find_by(id: params[:id])
         @user=@book_id.user
+        @book_comment=BookComment.new
     end
 
     def index
